@@ -1,0 +1,24 @@
+make: Wejście do katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'
+make[1]: Wejście do katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'
+make[2]: Wejście do katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'
+Scanning dependencies of target enum_sort
+make[2]: Opuszczenie katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'
+make[2]: Wejście do katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'
+[ 40%] Building CXX object CMakeFiles/enum_sort.dir/main.cpp.o
+[ 40%] Building CXX object CMakeFiles/enum_sort.dir/reporttable.cpp.o
+[ 60%] Linking CXX executable enum_sort
+CMakeFiles/enum_sort.dir/idtypedelegate.cpp.o: In function `IdTypeDelegate::IdTypeDelegate(QObject*)':
+idtypedelegate.cpp:(.text+0x36): undefined reference to `vtable for IdTypeDelegate'
+CMakeFiles/enum_sort.dir/main.cpp.o: In function `ReportTable::~ReportTable()':
+main.cpp:(.text._ZN11ReportTableD2Ev[_ZN11ReportTableD5Ev]+0xf): undefined reference to `vtable for ReportTable'
+main.cpp:(.text._ZN11ReportTableD2Ev[_ZN11ReportTableD5Ev]+0x21): undefined reference to `vtable for ReportTable'
+CMakeFiles/enum_sort.dir/reporttable.cpp.o: In function `ReportTable::ReportTable(QWidget*)':
+reporttable.cpp:(.text+0x29): undefined reference to `vtable for ReportTable'
+reporttable.cpp:(.text+0x3b): undefined reference to `vtable for ReportTable'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/enum_sort.dir/build.make:176: enum_sort] Błąd 1
+make[2]: Opuszczenie katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'
+make[1]: *** [CMakeFiles/Makefile2:68: CMakeFiles/enum_sort.dir/all] Błąd 2
+make[1]: Opuszczenie katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'
+make: *** [Makefile:84: all] Błąd 2
+make: Opuszczenie katalogu '/home/user/workspace/openmw/enum_delgate_table_column_sort/build'

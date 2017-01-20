@@ -1,0 +1,18 @@
+CSMTools::Tools::runVerifier()
+- Maybe sorting stage should be added to CSMDoc::OperationHolder *CSMTools::Tools::getVerifier()
+- Verification results and viewed in ReportSubView's report table. : QTableView => DragRecordTable  => ReportTable
+- QSortFilterProxyModel allows to sort data in ReportTable (QTableView). But type column has assigned model delegate.
+- after removal of type column model delegate it contains enum values instead of strings. So probably model delegate needs to be fixed.
+- What are those delegates anyway? QStyledItemDelegate => CommandDelegate => EnumDelegate => DataDisplayDelegate => IdTypeDelegate 
+- Is changing setModel in IdTypeDelegate a solution?
+- How sorting is done in QTableView? When I've deleted QSortFilterProxyModel sorting stopped to work completely.
+
+	Sorting by 'Type' (CSMWorld::UniversalId enum) is wrong. Possibly there is delegate for this. @openmw
+	- How UniversalId enum is viewed correctly in report table? Using delegate CSVWorld::CommandDelegate *mIdTypeDelegate;
+QAbstractItemModel::sort
+CommandDelegate::setModelData 
+CSMWorld::Data has container of QAbstractItemModel
+	- related classes @ReportModel @ReportTable
+	- debug CSVWorld::IdTypeDelegateFactory::IdTypeDelegateFactory()
+	- debug DataDisplayDelegateFactory::add()
+	- debug DataDisplayDelegateFactory::mValues content
